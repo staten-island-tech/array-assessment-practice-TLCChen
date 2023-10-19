@@ -100,3 +100,23 @@ const titles = [
 //was every book published within the last 100 years?
 
 //print a list of books that "includes" the genre historical
+
+books.forEach((book) =>
+  console.log(
+    book.authorFirst,
+    book.authorLast,
+    "wrote",
+    book.name,
+    "in",
+    book.publishDate
+  )
+);
+
+const list = [];
+
+books.forEach((date) => list.push(date.publishDate));
+list.sort();
+console.log(list);
+
+const war = books.filter((peace) => peace.name.includes("War"));
+console.log(war);
