@@ -120,3 +120,25 @@ console.log(list);
 
 const war = books.filter((peace) => peace.name.includes("War"));
 console.log(war);
+
+const alpha = books.sort((a, b)=> a.publishDate - b.publishDate)
+console.log(alpha)
+
+const pre1900 = books.filter((date)=> date.publishDate < 1900)
+console.log("There are", pre1900.length, "books printed before 1900.")
+
+const date = new Date
+const past100 = books.filter((newBook)=> date.getFullYear() - newBook.publishDate <= 100)
+if(past100.length > 1){
+  console.log("At least one book was printed in the past 100 years.")
+}
+
+const allBooks = books.length
+if (allBooks === past100){
+  console.log("All books were printed within the past 100 years.")
+}else{
+  console.log("No, only", past100.length, "books were printed within the past 100 years.")
+}
+
+const historical = books.filter((history)=> history.genre.includes("historical"))
+console.log(historical)
