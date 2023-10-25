@@ -128,7 +128,6 @@ console.log(time);
 
 const pre1900 = books.filter((date) => date.publishDate < 1900);
 console.log("There are", pre1900.length, "books printed before 1900.");
-
 const date = new Date();
 const past100 = books.filter(
   (newBook) => date.getFullYear() - newBook.publishDate <= 100
@@ -152,3 +151,6 @@ const historical = books.filter((history) =>
   history.genre.includes("historical")
 );
 console.log(historical);
+data
+  .filter((role) => role.displayName == "Duelist")
+  .forEach((duelist) => console.log(duelist.displayName));
